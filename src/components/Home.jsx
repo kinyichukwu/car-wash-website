@@ -24,7 +24,7 @@ export default function Home() {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="py-3 w-fit px-6  mt-7 no-underline text-white block bg-blue-500 rounded-2xl text-base font-medium  hover:bg-blue-600   active:bg-blue-500 animate-bounce"
+          className="py-3 w-fit px-6  mt-7 no-underline text-white block bg-blue-500 rounded-2xl text-base font-medium  hover:bg-blue-600   active:bg-blue-500 animate-bounce mx-auto md:mx-0"
         >
           Buy Now
         </a>
