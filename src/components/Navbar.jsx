@@ -1,11 +1,18 @@
 import logo from "../assets/Logo.png";
 
 export default function Navbar() {
+  const phoneNumber = "+2348082886416";
+  const message = "";
+
+  // Generate the WhatsApp URL
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+    message
+  )}`;
   return (
     <>
       <nav class="bg-white border-gray-200 flex justify-between items-center max-w-screen-2xl mx-auto md:px-5 py-2">
         <div class=" flex flex-wrap items-center justify-between p-4">
-          <a href="https://flowbite.com/" class="flex items-center">
+          <a href="#" class="flex items-center">
             <img src={logo} class="h-8 mr-2" alt=" Logo" />
             <span class=" text-lg self-center md:text-xl font-bold text-[#0B132A]">
               Supreme Wash
@@ -30,7 +37,7 @@ export default function Navbar() {
 
           <li className="">
             <a
-              href="#"
+              href={whatsappUrl}
               class=" py-2 px-4 text-[#4F5665]    border border-[#1246FF] rounded-3xl"
             >
               Contact

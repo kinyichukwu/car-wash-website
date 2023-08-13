@@ -2,7 +2,28 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import productImage from "./assets/carwash-removebg.png";
 
+const WhatsAppLink = () => {
+  // Replace with the desired phone number and message (optional)
+
+  return (
+    <div>
+      <p>Click the link below to open WhatsApp:</p>
+      <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+        Open WhatsApp
+      </a>
+    </div>
+  );
+};
+
 function App() {
+  const phoneNumber = "+2348082886416";
+  const message = "Hello, I will like to purchase Supreme Car Wash ";
+
+  // Generate the WhatsApp URL
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+    message
+  )}`;
+
   return (
     <>
       <Navbar />
@@ -13,8 +34,8 @@ function App() {
         <img src={productImage} alt="" className=" md:w-[15rem] w-[30%]" />
       </div>
       <p className="text-blue-600 font-semibold md:text-[2.156rem] text-lg text-center max-w-screen-2xl mx-auto md:px-10 px-3">
-        Buy Now for <span className=" line-through text-red-500">₦ 14,000</span>{" "}
-        <span className="">₦ 6,000 ONLY.</span>{" "}
+        Buy Now for <span className=" line-through text-red-500">₦ 5,000</span>{" "}
+        <span className="">₦ 2,000 ONLY.</span>{" "}
       </p>
 
       <div className="max-w-screen-2xl mx-auto md:px-10 px-3 text-center md:w-[70%] md:mt-36 mt-12 mb-[2.38rem]">
@@ -37,7 +58,7 @@ function App() {
       <div className="max-w-screen-2xl mx-auto md:px-10 px-3 flex justify-center items-center md:gap-24 flex-col md:flex-row">
         <div className=" text-center">
           <span className=" line-through font-semibold text-[2.156rem] text-center text-[#0B132A]">
-            ₦ 14,000
+            ₦ 5,000
           </span>{" "}
           <br />
           <span className="text-[#0B132A]">Original Price</span>
@@ -45,7 +66,7 @@ function App() {
 
         <div className=" text-center mt-5 md:mt-0">
           <span className=" font-semibold text-[2.156rem] text-center text-blue-600">
-            ₦ 6,000
+            ₦ 2,000
           </span>{" "}
           <br />
           <span className=" text-blue-600">Discount Offer</span>
@@ -53,9 +74,16 @@ function App() {
       </div>
 
       <div className="md:mt-28 max-w-screen-2xl mx-auto mt-12">
-        <button className="py-3 px-6 text-white mx-auto block bg-blue-500 rounded-2xl text-base font-medium  hover:bg-blue-600   active:bg-blue-500 animate-bounce">
-          Buy Now
-        </button>
+    
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="py-3 w-fit px-6 no-underline text-white mx-auto block bg-blue-500 rounded-2xl text-base font-medium  hover:bg-blue-600   active:bg-blue-500 animate-bounce"
+          >
+            Buy Now
+          </a>
+     
 
         <img src={productImage} alt="" className=" mt-14 w-[18rem] mx-auto" />
       </div>
@@ -64,9 +92,14 @@ function App() {
         <h1 className=" text-4xl text-[#0B132A] font-medium my-7 ">
           Contact Info
         </h1>
-        <button className="py-3 px-6 text-white mx-auto block bg-blue-500 rounded-2xl text-base font-medium  hover:bg-blue-600   active:bg-blue-500 ">
-          Contact Us
-        </button>
+        <a
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="py-3 w-fit px-6 no-underline text-white mx-auto block bg-blue-500 rounded-2xl text-base font-medium  hover:bg-blue-600   active:bg-blue-500 "
+      >
+       Contact Us
+      </a>
       </div>
 
       <section class="bg-blue-700 max-w-screen-2xl mx-auto">
